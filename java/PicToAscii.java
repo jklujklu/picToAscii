@@ -46,11 +46,11 @@ public  class PicToAscii {
 
     public static void main(String[] args) {
         PicToAscii pic = new PicToAscii();
-        pic.init();
+        pic.init(4,1);
     }
 
-    public void init(){
-        createAsciiPic(4,1);
+    public void init(int multiple, int degree){
+        createAsciiPic(multiple, degree);
     }
 
     /*
