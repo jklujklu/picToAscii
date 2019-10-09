@@ -15,7 +15,7 @@ public class FileUtil {
         if(result == JFileChooser.APPROVE_OPTION){
             //获得你选择的文件绝对路径。并输出。当然，我们获得这个路径后还可以做很多的事。
             path = fc.getSelectedFile().getAbsolutePath();
-            System.out.println(path);
+            System.out.println("当前图片为："+path);
         }
         return path;
     }

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.imageio.ImageIO;
@@ -46,11 +47,19 @@ public  class PicToAscii {
 
     public static void main(String[] args) {
         PicToAscii pic = new PicToAscii();
-        pic.init(4,1);
+        int multiple = 2, degree = 2;
+        Scanner in =new Scanner(System.in);
+        System.out.print("请输入图片放大倍数（默认为2倍）：");
+        multiple = in.nextInt();
+        System.out.println();
+        System.out.print("请输入ASCII字符密集程度（越小越密集，默认为2）：");
+        degree = in.nextInt();
+        System.out.println();
+        pic.init(multiple,degree);
     }
 
     public void init(int multiple, int degree){
-        createAsciiPic(multiple, degree);
+        createAsciiPic(multiple,degree);
     }
 
     /*
@@ -80,7 +89,7 @@ public  class PicToAscii {
         Pattern p =Pattern.compile(regex);
         Matcher m = p.matcher(str);
         if(m.find()) {
-            System.out.println(m.group(1));
+            System.out.println("当前图片格式为："+m.group(1));
             return m.group(1);
         }else {
             System.out.println("No Match");
