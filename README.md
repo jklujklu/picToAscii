@@ -16,11 +16,9 @@ String regex = "\\.(jpg|jpeg|png|gif|bmp)";
 ```
 
 ## 使用方法
-调用init()方法
-```java
-/*
- * multiple 为图片放大的倍率，即生成的Ascii字符画大小为原画的若干倍
- * degree   为Ascii字符的密集程度，数字越小越密集
- */
-public void init(int multiple, int degree)
+
+```
+cd java
+javac PicToAscii.java
+java PicToAscii
 ```
